@@ -13,16 +13,15 @@
   				<span class="glyphicon glyphicon-plus"></span>
 	  		</button>
   		</div>
-  	</div>
-  	<div class="panel-body table-responsive">
-  		<div ng-hide="stocks.length" class="jumbotron">
-  			<h1>Woof.</h1>
-  			<p>Looks like you haven't added any stocks to this watchlist yet!</p>
-  			<p>Do so now by clicking the <span class="glyphicon glyphicon-plus"></span> located above.</p>
-  		</div>
-  		<!--[1] loop over all stocks and display company symbols -->
-  		<p ng-repeat="stock in stocks">{{stock.company.symbol}}</p>
+	  	<div class="panel-body table-responsive">
+  			<div ng-hide="stocks.length" class="jumbotron">
+  				<h1>Woof.</h1>
+  				<p>Looks like you haven't added any stocks to this watchlist yet!</p>
+  				<p>Do so now by clicking the <span class="glyphicon glyphicon-plus"></span> located above.</p>
+	  		</div>
+	  		<!--[1] loop over all stocks and display company symbols -->
+	  		<p ng-repeat="stock in stocks">{{stock.company.symbol}}</p>
+	  	</div>
   	</div>
   </div>
-
 </div>

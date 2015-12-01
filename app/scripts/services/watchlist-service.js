@@ -3,6 +3,14 @@
 angular.module('stockDogApp')
   .service('WatchlistService', function WatchlistService() {
 
+    var StockModel = {
+      save: function () {
+        var watchlist = findById(this.listId);
+        watchlist.recalculate();
+        saveModel();
+      }
+    };
+
     // Helper: Load watchlists from localStorage
     var loadModel = function () {
       var model = {
@@ -63,14 +71,6 @@ angular.module('stockDogApp')
 
     // Initialize Model for this singleton service
     var Model = loadModel();
-
-    var StockModel = {
-      save: function () {
-        var watchlist = findById(this.listId);
-        watchlist.recalculate();
-        saveModel();
-      }
-    }
 
     var WatchlistModel = {
       addStock: function (stock) {
